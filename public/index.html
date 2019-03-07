@@ -294,10 +294,12 @@
 											    <div class="form-group col-md-6">
 											      <label for="inputEmail4">Categoría de sorteo: </label>
 											      <input type="text" class="form-control"  placeholder="Ej: golosinas" name="categoriaProd" id="categoriaProd" required>
-											    </div>
+														<span class="bmd-help">Debes ingresar una Categoría de sorteo.</span>
+													</div>
 											    <div class="form-group col-md-6">
 											      <label for="inputPassword4">¿Que producto sorteas específicamente?  </label>
-											      <input type="text" class="form-control"  placeholder="Ej: caramelos" name="nombreProd"  id="nombreProd" required>
+														<input type="text" class="form-control"  placeholder="Ej: caramelos" name="nombreProd"  id="nombreProd" required>
+														<span class="bmd-help">Debes ingresar una Categoría de producto.</span>
 											    </div>
 										  </div>
 
@@ -407,109 +409,45 @@
 <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
 <script src="assets/js/plugins/moment.min.js"></script>
 	<!--   Core JS Files   -->
-	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
 
 	<!--  Plugin for the Wizard -->
-	<script src="assets/js/material-bootstrap-wizard.js"></script>
+<script src="assets/js/material-bootstrap-wizard.js"></script>
 
 	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	  -->
-	<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
 	
-	
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script src="assets/js/config/firebaseConfig.js"></script>
+<script src="assets/js/storage/storageMain.js"></script>
 
+	<script src="assets/js/plugins/imagesFirstStep.js"></script>
 	<script type="text/javascript">
-		$("#react").hide();
-		$(document).ready(function(){
-
-			// resize of images
-
-			if 	( $(window).width() >= 768 ){
-				
-				$('.wraperImage').addClass('col-sm-3')
-			}
-
-			$( window ).resize(function() {
-
-					if 	( $(window).width() >= 768 ){
-					
-					$('.wraperImage').addClass('col-sm-3')
-					}
-
-					else {
-
-						$('.wraperImage').removeClass('col-sm-3')
-
-
-					}
-
-
-
-			})
-
-			$(".img-thumb").click(function(){
-				$('.img-thumb').removeClass('selected')
-    $(this).addClass("selected")
-		});
-
-
-
-
-
-
-
+	
+	$("#react").hide();
 			// Funcion para el botón personalizar
 			  $("#personalizar").click(function(){
 			    $("#react").toggle(100);
 			    $("#cantDias").toggle(100);
 			  });
-			
-
 	
-		
-
-
-
-			});
 	</script>
+
 
 
 <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
 
 <!-- javascript for init -->
-<script>
-$('.datetimepicker').datetimepicker({
-	icons: {
-			time: "fa fa-clock-o",
-			date: "fa fa-calendar",
-			up: "fa fa-chevron-up",
-			down: "fa fa-chevron-down",
-			previous: 'fa fa-chevron-left',
-			next: 'fa fa-chevron-right',
-			today: 'fa fa-screenshot',
-			clear: 'fa fa-trash',
-			close: 'fa fa-remove'
-	},
-	format: 'L'
-});
-
-$('.datetimepicker2').datetimepicker({
-	icons: {
-			time: "fa fa-clock-o",
-			date: "fa fa-calendar",
-			up: "fa fa-chevron-up",
-			down: "fa fa-chevron-down",
-			previous: 'fa fa-chevron-left',
-			next: 'fa fa-chevron-right',
-			today: 'fa fa-screenshot',
-			clear: 'fa fa-trash',
-			close: 'fa fa-remove'
-	},
-	format: 'L'
-});
-</script>
+<script src="assets/js/plugins/datePicker.js"></script>
 
 <script src="assets/js/dataPicker.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<script src="assets/js/db/db.js" ></script>
+<script src="assets/js/db/test.js" ></script>
+
 
 </html>
