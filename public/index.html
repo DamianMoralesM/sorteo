@@ -38,7 +38,7 @@
 .selected {
 	border-style: solid;
   border-width: 2px;
-	border-color: #8e8686;
+	border-color: #474646;
 }
 
 .card-1:hover {
@@ -106,17 +106,17 @@
 						<ul class="navbar-nav ml-auto">
 							<li class=" nav-item">
 								<a href="index.html" class="nav-link">
-										Publicar Sorteo
+										Principal
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#pablo" class="nav-link">
-									Registrarme
+									Dashboard
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#pablo" class="nav-link">
-									Iniciar Sesión
+									Cerrar Sesión
 								</a>
 							</li>
 						</ul>
@@ -157,11 +157,11 @@
 
 		                        	<!-- First Tab-->
 		                            <div class="tab-pane" id="details">
-		                            		<div class="row">
-								 			<div class="wraperImage" style="padding: 3px;"><img class="img-thumb card-1" src="single_3_thumb.jpg" alt="Card image cap"></div>
-										 	<div class="wraperImage" style="padding: 3px;"><img class="img-thumb card-1" src="single_3_thumb.jpg" alt="Card image cap"></div>
-										    <div class="wraperImage" style="padding: 3px;"><img class="img-thumb card-1" src="single_3_thumb.jpg" alt="Card image cap"></div>
-										 	<div class="wraperImage" style="padding: 3px;"><img class="img-thumb card-1" src="single_3_thumb.jpg" alt="Card image cap"></div>
+		                            		<div class="row" style="padding-top: 30px;">
+								 			<div class="wraperImage" style="padding: 3px;"><img id="1" class="img-thumb card-1" src="sorteo.jpg" alt="Card image cap"></div>
+										 	<div class="wraperImage" style="padding: 3px;"><img id="2" class="img-thumb card-1" src="pic.jpg" alt="Card image cap"></div>
+										    <div class="wraperImage" style="padding: 3px;"><img id="3" class="img-thumb card-1" src="pic2.jpg" alt="Card image cap"></div>
+										 	<div class="wraperImage" style="padding: 3px;"><img id="4" class="img-thumb card-1" src="pic3.jpg" alt="Card image cap"></div>
 
 											
 
@@ -187,7 +187,7 @@
 							<div id="cantDias">
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 2 dias
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio1" value="2" checked> 2 dias
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -195,7 +195,7 @@
 										</div>
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 3 dias
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio2" value="3"> 3 dias
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -203,7 +203,7 @@
 										</div>
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 4 dias
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio2" value="4"> 4 dias
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -211,7 +211,7 @@
 										</div>
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 días
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio2" value="5"> 5 días
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -219,7 +219,7 @@
 										</div>
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 6 días
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio2" value="6"> 6 días
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -227,7 +227,7 @@
 										</div>
 										<div class="form-check form-check-radio form-check-inline">
 										  <label class="form-check-label">
-										    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Una semana
+										    <input class="form-check-input" type="radio" name="duracion" id="inlineRadio2" value="7"> Una semana
 										    <span class="circle">
 										        <span class="check"></span>
 										    </span>
@@ -238,6 +238,7 @@
 											 
 											 <div class="row"><a id="personalizar" href="#" class="btn btn-success">Personalizar</a></div> 
 								
+											 
 										<div id="react" >
 												<div class="form-group">
 														<label class="label-control">Fecha de Apertura</label>
@@ -250,17 +251,53 @@
 										</div>
 										<!-- input with datetimepicker -->
 
+									<!-- Ubicación			-->
+<!--
+									<div class="form-row">
+										<div class="form-group col-md-6">
+												<div class="form-group">
+														<label for="provincia">Provincia</label>
+														<select class="form-control selectpicker" data-style="btn btn-link" id="provincia">
+															<option>Chaco</option>
+															<option>Corrientes</option>
+														</select>
+													</div>
 
+										</div>
+
+										
+									<div class="form-group col-md-6">
+											<div class="form-group">
+													<label for="ciudad">Ciudad</label>
+													<select class="form-control selectpicker" data-style="btn btn-link" id="ciudad">
+														<option>Resistencia</option>
+														<option>Corrientes Capital</option>
+													</select>
+												</div>
+										
+
+									</div>
+
+									</div>
+-->
+
+
+
+
+
+
+
+									<!-- 		-->
 										<h4>Info del producto/servicio</h4>
 											
 												<div class="form-row">
 											    <div class="form-group col-md-6">
 											      <label for="inputEmail4">Categoría de sorteo: </label>
-											      <input type="text" class="form-control"  placeholder="Ej: golosinas" name="categoriaProd">
+											      <input type="text" class="form-control"  placeholder="Ej: golosinas" name="categoriaProd" id="categoriaProd" required>
 											    </div>
 											    <div class="form-group col-md-6">
 											      <label for="inputPassword4">¿Que producto sorteas específicamente?  </label>
-											      <input type="text" class="form-control"  placeholder="Ej: caramelos" name="nombreProd">
+											      <input type="text" class="form-control"  placeholder="Ej: caramelos" name="nombreProd"  id="nombreProd" required>
 											    </div>
 										  </div>
 
@@ -274,24 +311,24 @@
 		                               	<div class="alert alert-info">
 									        <div class="container">
 									          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									            <span aria-hidden="true"><i class="material-icons">clear</i></span>
-									          </button>
+															<span aria-hidden="true"><i class="material-icons">clear</i></span>
+															<input type="hidden" value="1" name="condicion">
+ 									          </button>
 									          <b>1# Like en la foto </b> 
 									        </div>
 									      </div>
 
 									       	<div class="alert alert-info card-1 ">
 									        <div class="container">
-									          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									            <span aria-hidden="true"><i class="material-icons">clear</i></span>
-									          </button>
-									          <b>2# Amigos en los comentarios </b> 
+															<input type="hidden" value="2"  name="condicion">
+									         <b>2# Amigos en los comentarios </b> 
 									        </div>
 									      </div>
 
 									      	<div class="alert alert-info">
 									        <div class="container">
 									          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+																<input type="hidden" value="3"  name="condicion">
 									            <span aria-hidden="true"><i class="material-icons">clear</i></span>
 									          </button>
 									          <b>3# Compatir en Historia  </b> 
@@ -301,6 +338,7 @@
 									      	<div class="alert alert-info">
 									        <div class="container">
 									          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+																<input type="hidden" value="4"  name="condicion">
 									            <span aria-hidden="true"><i class="material-icons">clear</i></span>
 									          </button>
 									          <b>4# Like en nuestra pagina</b> 
@@ -316,7 +354,7 @@
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Siguiente' />
-	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Publicar' />
+	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Publicar' onClick="pickData()"/>
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
@@ -376,8 +414,10 @@
 	<!--  Plugin for the Wizard -->
 	<script src="assets/js/material-bootstrap-wizard.js"></script>
 
-	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	  -->
 	<script src="assets/js/jquery.validate.min.js"></script>
+	
+	
 
 	<script type="text/javascript">
 		$("#react").hide();
@@ -405,6 +445,7 @@
 					}
 
 
+
 			})
 
 			$(".img-thumb").click(function(){
@@ -425,7 +466,8 @@
 			  });
 			
 
-
+	
+		
 
 
 
@@ -467,5 +509,7 @@ $('.datetimepicker2').datetimepicker({
 	format: 'L'
 });
 </script>
+
+<script src="assets/js/dataPicker.js"></script>
 
 </html>
