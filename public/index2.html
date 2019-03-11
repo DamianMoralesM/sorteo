@@ -29,17 +29,15 @@
 
 	<style>
 
-		@media(max-width:426px){
-		 .bottomButton{
+    .bottomButton{
 
-					position: fixed;
-					bottom:0;
-					width: 100%;
-					background:black;
-					right: 0px;
-					
-				}
-		}
+        position: fixed;
+           bottom:0;
+           width: 100%;
+           background:lightblue;
+           right: 0px;
+           
+    }
 
 .card-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -103,56 +101,44 @@
 
 <body>
 
-		<nav class="navbar navbar-expand-lg bg-info">
-				<div class="container">
-					<div class="navbar-translate">
-						<a class="navbar-brand" href="#0">Sortegram</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" style="">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="navbar-toggler-icon"></span>
-							<span class="navbar-toggler-icon"></span>
-							<span class="navbar-toggler-icon"></span>
-						</button>
-					</div>
-					<div class="collapse navbar-collapse">
-						<ul class="navbar-nav ml-auto">
-							<li class=" nav-item">
-								<a href="index.html" class="nav-link">
-										Principal
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#pablo" class="nav-link">
-									Dashboard
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#pablo" class="nav-link">
-									Cerrar Sesión
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+	
 
 	
 	    <!--   Big container   -->
 	    <div class="container">
+
+            
 	        <div>
 		        <div >
 		            <!--      Wizard container        -->
-		            <div class="wizard-container" style="padding-top: 0px;">
-		                <div class="card wizard-card" data-color="orange" id="wizard" style="margin-top: 0px;padding-top: 0px;"">
+                    <div class="wizard-container" style="padding-top: 0px;">
+                           
+                        
+		                <div class="card wizard-card bottomButton" data-color="orange" id="wizard" >
 		                    <form action="" method="">
+                                    <div class="wizard-header" style="padding-top: 10px">
+                                            <h3 class="wizard-title" >
+                                                Publicar Sorteo
+                                            </h3>
+                                            
+                                        </div>
+                                	<div class="wizard-footer">
+                                            <div class="pull-right">
+                                                <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Siguiente' />
+                                                <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Vista Previa' onClick="pickData()" data-toggle="modal" data-target="#preview"/>
+                                            </div>
+                                            <div class="pull-left">
+                                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
+        
+                                            
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
-		                    	<div class="wizard-header" style="padding-top: 10px">
-		                        	<h3 class="wizard-title" >
-		                        		Publicar Sorteo
-		                        	</h3>
-									
-		                    	</div>
+		                    	
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#details" data-toggle="tab">1.  Seleccionar Foto</a></li>
@@ -365,18 +351,7 @@
 		                        </div>
 
 
-	                        	<div class="wizard-footer bottomButton">
-	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Siguiente' />
-	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Vista Previa' onClick="pickData()" data-toggle="modal" data-target="#preview"/>
-	                                </div>
-	                                <div class="pull-left">
-	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Atras' />
-
-									
-	                                </div>
-	                                <div class="clearfix"></div>
-	                        	</div>
+	                        
 
 
 		                    </form>
