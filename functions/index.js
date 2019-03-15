@@ -32,14 +32,15 @@ app.set('view engine', 'hbs');
 
 
 // Routes
+/*
 app.get('/prueba',function(req,res){
 
     
 
     res.render('prueba')
 });
-
-app.get('/index', function(req,res){
+*/
+app.get('/prueba', function(req,res){
   var salida = []
   unsplash.search.photos("food", 1,10)
   .then(toJson)
